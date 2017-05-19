@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [Updating to 0.20](updating-to-020.md)
 * [Komada Pieces](komada-pieces.md)
   * [Commands](commands.md)
   * [Functions](functions.md)
@@ -24,3 +25,4 @@
   * [Boolean Types](configuration/boolean-types.md)
   * [Number Types](configuration/number-types.md)
   * [String Types](configuration/string-types.md)
+

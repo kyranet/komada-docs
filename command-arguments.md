@@ -13,6 +13,7 @@ exports.conf = {
   permLevel: 0,
   botPerms: [],
   requiredFuncs: [],
+  cooldown: 60, //optional
 };
 ```
 
@@ -33,6 +34,7 @@ in which your bot requires to run this command (such as `"MANAGE_MESSAGES"`).
 run this command. They are present on [komada-pieces](https://github.com/dirigeants/komada-pieces) GitHub repo.
 - **selfbot**: Additionally, there's a property called selfbot, must be a boolean.
 Set to true to only load this command if the bot is configured to be a selfbot.
+- **cooldown** (optional): If set, must be an integer that represents the number of seconds that have to elapse before a user can run a command again. During this time, the bot will not execute the command and will reply with the remaining time instead.
 
 > Note: About **aliases**, if you have a command called ping, and you set "pong" as
 an alias inside the aliases array, both ping and pong will trigger the same command.
@@ -167,7 +169,7 @@ Komada does *String.toLowerCase()*, if you write `DELETE` or any other variation
 We come back to the `exports.run`, remember that we have:
 
 ```js
-exports.run = (client, msg, [message, action, newContent]) => {
+exports.run = async (client, msg, [message, action, newContent]) => {
   // code
 };
 ```

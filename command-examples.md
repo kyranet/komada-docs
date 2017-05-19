@@ -48,7 +48,7 @@ Now, we want a command with an argument, we will take this one as example:
 from the GitHub repo [komada-pieces](https://github.com/dirigeants/komada-pieces):
 
 ```js
-exports.run = (client, msg, [ugc]) => {
+exports.run = async (client, msg, [ugc]) => {
   const util = require("util");
   ugc = util.inspect(ugc, { depth: 0 });
   msg.channel.sendCode("xl", client.funcs.clean(client, ugc));
