@@ -34,14 +34,16 @@ exports.run = async (client, msg) => {
 
 ## Log command changed
 
-Previously, you could send a message using the internal `log` function which included a nice color and timestamp. Internal functions have changed, and the way to send logs has moved. You can now send it as an event instead:
+Previously, you could send a message using the internal `log` function which included a nice color and timestamp. Internal functions have changed, and the way to send logs has moved. You can now send it as an event instead, which now also supports any Object as well as string logs.
 
 ```js
-client.emit('log', message<String>, type<String:Optional>);
+client.emit('log', message<StringOrObject>, type<String:Optional>);
 // type can be "debug", "log", "error", or "warn"
 
 //Example:
 client.emit("log", "Something's wonky, mate!", "warn");
+
+<something>.catch(e=> client.emit("log", e, "error"));
 ```
 
 ## Using the new `send` wrapper for editable commands
