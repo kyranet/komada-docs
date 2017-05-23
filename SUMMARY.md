@@ -21,6 +21,7 @@
   * [Creating Providers](creating-providers.md)
 * [Download Pieces](download-pieces.md)
 * [Configuration](configuration.md)
+  * [Using Configurations](configuration/using-configurations.md)
   * [Array Types](configuration/array-types.md)
   * [Boolean Types](configuration/boolean-types.md)
   * [Number Types](configuration/number-types.md)
